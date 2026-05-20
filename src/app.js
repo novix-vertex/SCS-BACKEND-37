@@ -4,10 +4,10 @@ const app = express()
 
 app.use(express.json())
 
-const note = [];
+const notes = [];
 
 app.post('/notes', (req, res) => {
-    note.push(req.body())
+    notes.push(req.body())
     res.send("Note created successfully")
 })
 app.get('/notes', (req, res) => {
